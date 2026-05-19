@@ -5,7 +5,8 @@ from psycopg2.extras import RealDictCursor
 from datetime import datetime, timedelta
 
 # DATABASE_URL must use 'db' to match the service name in docker-compose.yml
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://admin:secretpassword@db:5432/weather_station")
+DATABASE_URL = "postgresql://postgres.bgksinwjsrkjymhmzsks:H%23u%2ENg3YfR8yF%24Y@aws-1-ap-northeast-1.pooler.supabase.com:6543/postgres?pgbouncer=true"
+
 
 def get_db_connection():
     return psycopg2.connect(DATABASE_URL, cursor_factory=RealDictCursor)
